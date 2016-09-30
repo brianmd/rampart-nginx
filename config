@@ -4,8 +4,8 @@ server {
 
   server_name marketing-10.insummit.com;
 
-  # root /var/www/html;
-  # index index.html index.htm index.nginx-debian.html;
+  root /var/www/html;
+  index index.html index.htm index.nginx-debian.html;
 
   server_name _;
 

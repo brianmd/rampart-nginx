@@ -33,7 +33,8 @@ fi
 
 IMAGE_NAME="bach/rampart-nginx:$RAMPART_NGINX_VERSION"
 
-cmd="/usr/bin/systemd-docker run --add-host=rampart-api:$RAMPART_HOST -p 0.0.0.0:$NGINX_PORT:80 --log-driver=journald --rm --name %n $IMAGE_NAME"
+# cmd="/usr/bin/systemd-docker run --add-host=rampart-api:$RAMPART_HOST -p 0.0.0.0:$NGINX_PORT:80 --log-driver=journald --rm --name %n $IMAGE_NAME"
+cmd="docker run --add-host=rampart-api:$RAMPART_HOST -p 0.0.0.0:$NGINX_PORT:80 --log-driver=journald --rm --name rampart-nginx $IMAGE_NAME"
 # print cmd, as it might be useful to copy/paste into service script
 echo
 echo "running: $cmd"
